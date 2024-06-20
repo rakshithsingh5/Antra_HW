@@ -124,10 +124,17 @@ GROUP BY c.CustomerID
 HAVING COUNT(od.OrderID)>100
 
 --23Q
-
+SELECT s.CompanyName AS SupplierCompanyName, sh.CompanyName AS ShippingCompanyName
+FROM Suppliers s JOIN Products p ON s.SupplierID = p.SupplierID JOIN [Order Details] od ON p.ProductID = od.ProductID JOIN Orders o ON od.OrderID = o.OrderID JOIN Shippers sh ON o.ShipVia = sh.ShipperID
+GROUP BY s.CompanyName, sh.CompanyName
+ORDER BY s.CompanyName, sh.CompanyName
 
 --24Q
-
+SELECT o.OrderDate, p.ProductName
+FROM Orders o
+JOIN [Order Details] od ON o.OrderID = od.OrderID
+JOIN Products p ON od.ProductID = p.ProductID
+ORDER BY o.OrderDate, p.ProductName
 
 --25Q
 SELECT e1.EmployeeID AS Employee1ID, e1.FirstName AS Employee1Name, e2.EmployeeID AS Employee2ID,
@@ -143,3 +150,9 @@ GROUP BY Manager.EmployeeID, Manager.FirstName
 HAVING COUNT(DISTINCT e.EmployeeID) > 2
 
 --27Q
+SELECT City, CompanyName AS Name, ContactName, 'Customer' AS Type
+FROM Customers
+UNION ALL
+SELECT City, CompanyName AS Name, ContactName, 'Supplier' AS Type
+FROM Suppliers
+ORDER BY City, Type, Name;
