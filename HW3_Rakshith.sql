@@ -41,6 +41,7 @@ SELECT City
 FROM Customers
 GROUP BY City
 HAVING COUNT(CustomerID) >= 2
+--Here the usuage of Union is not effective since we are executing same query twice.
 
 --using sub-query and no union
 SELECT DISTINCT City
