@@ -162,3 +162,17 @@ SELECT *
 FROM original_table
 ) AS T
 WHERE DupRank > 1
+
+/*
+Lecture Question Assignment: WHAT IS THE MAIN DIFFERENCE BETWEEN VARCHAR AND NVARCHAR IN SQL SERVER?
+A: 
+Varchar and nvarchar are variable-length character data types, which are used for declaring the data type of the variables used in the SQL server table. 
+Although both of them serve the same purpose, there are still a few differences between them.
+
+The major difference between varchar vs nvarchar
+    1. Nvarchar stores UNICODE data. If you have requirements to store UNICODE or multilingual data, nvarchar is the choice. 
+    Varchar stores ASCII data and should be your data type of choice for normal use.
+    2. For nvarchar, when using characters defined in the Unicode range 0-65,535, one character can be stored per each byte-pair, however, in higher Unicode ranges (65,536-1,114,111) one character may use two byte-pairs. 
+    Whereas varchar only uses 1 byte.
+*/
+
