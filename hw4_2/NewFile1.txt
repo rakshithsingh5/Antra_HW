@@ -1,0 +1,14 @@
+1. String: Use String when the value is immutable (i.e., it does not change after it is created). 
+Since strings in C# are immutable, any modification to a string creates a new string in memory. 
+This can be inefficient for frequent modifications.
+   Example: string greeting = "Hello, " + name + "!";
+StringBuilder: Use StringBuilder for scenarios where you need to perform many modifications to a string (such as appending, inserting, or replacing characters). 
+StringBuilder is more efficient because it allows modifications without creating new instances.
+   
+2. The base class for all arrays in C# is System.Array.
+3. You can use Array.sort method to sort the array. Ex: Array.sort(numbers);
+4. 'Length' is the property to find total number of elements in an array.
+5. No, you cannot store multiple datatypes in the 'System.Array'.
+6. Array.CopyTo(): This method copies all the elements of the current array to another array.
+   Array.Clone(): This method creates a shallow copy of the array returns a new array object which includes all elements.
+ 
