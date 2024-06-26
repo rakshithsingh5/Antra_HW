@@ -1,0 +1,30 @@
+1. Identify the datatype
+    1. ushort or string(if it contains + or '()');
+    2. float;
+    3. ushort;
+    4. enum;
+    5. double
+    6. string
+    7. float or double
+    8. float
+    9. uint
+    10. ulong
+    11. int
+2. 
+     1. A value type is a type of the datatype which actually stores value in the memory,
+     whereas the reference datatype stores the reference or the address of the variable value which is stored in different memory location.
+     Ex of value type is: int, float, double, long, etc.
+     Ex of reference type is: string and objects.
+     2. ->the process of converting value type to reference type is called boxing. Here
+        ->the process of converting reference type to value type is called unboxing.
+        -> value type are always stored in stack memory whereas the reference type are stored in heap memory.
+        -> ex: int num = 23;
+               Object obj = num; //boxing
+               int i =(int) obj; //unboxing
+3. The basic difference between manage resources and unmanaged resources is that for managed resources the garbage collector knows al the resources and al some point GC will clean up all the memory and resources, whereas for unmanaged resources GC cannot identify them such as files, stream and handles which are needed to cleaned them explicitly.
+4. The Garbage Collector (GC) in .NET serves multiple functions:
+        -Automatic Memory Management: Relieves developers from the task of manually handling memory allocation and deallocation.
+        - Object Lifetime Tracking: Monitors the lifespan of objects and identifies those that are no longer needed.
+        - Memory Reclamation: Recovers memory from objects that are no longer accessible, making it available for future use.
+        - Resource Management: Aids in handling unmanaged resources, particularly when combined with the `IDisposable` interface and the `Dispose` method.
+        - Optimization: Enhances memory usage efficiency and boosts application performance by minimizing fragmentation.

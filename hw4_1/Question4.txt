@@ -1,0 +1,14 @@
+1. when we attempt to divide a integer variable with zero it will throw an 'DivideByZeroException'. If we use a try-catch block we get a message "Attempted to divide by zero".
+2. Dividing a floating-point value by zero doesn't throw an exception; it results in positive infinity, negative infinity, or not a number (NaN).
+3. In a checked context, a exception is thrown "System.OverflowException".
+   In an unchecked context, that is when a value exceeds the max value it will wraps and become negative.
+4.'y++' value is assigned first and then is incremented and '++y' y is incremented first and then assignment happen.
+5.break exits from the loop, continue skip the current iteration and proceeds to the next iteration, return exits from the entire method and return to the caller method.
+6. the main three parts of for loop are:
+    1. Intialization: it is done in the first segment of for loop
+    2. Condition: During every iteration, for loop checks the condition if its true or false('i<10')
+    3. Itertion: this statement updates the loop control variable. it is executed at the end.
+7. '=' is assignment operator to assign values to the variable and '==' is Equality operator which compares two values for equality.
+8. Yes, above statement compiles but it goes into infinite loop.
+9.It represents a default case.
+10. To be enumerated over by using the `foreach` statement, an object must implement the `IEnumerable` or `IEnumerable<T>` interface.
