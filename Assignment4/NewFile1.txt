@@ -1,0 +1,15 @@
+1. Generics address the problem of code reuse and type safety. They allow developers to create classes, methods, and data structures that can operate with any data type while ensuring type safety at compile time. This prevents the need for repetitive code for different data types and reduces runtime errors due to type mismatches.
+2. List<string> stringList = new List<string>();
+3. The Dictionary class has two generic type parameters: TKey and TValue.
+4. False.
+5. The Add method is used to add items to a List object. Ex: list.Add(item);
+6. Name two methods that cause items to be removed from a List.
+   Remove and RemoveAt.
+7. You indicate that a class has a generic type parameter by using angle brackets (<T>) after the class name.
+   public class MyClass<T>
+   {
+       // Class implementation
+   }
+8. False.
+9. True.
+10. True.
